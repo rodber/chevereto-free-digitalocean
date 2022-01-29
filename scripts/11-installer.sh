@@ -5,7 +5,6 @@ get_latest_release() {
         grep '"tag_name":' |
         sed -E 's/.*"([^"]+)".*/\1/'
 }
-rm -rf "${WORKING_DIR}"/*
 latest=$(get_latest_release $REPO)
 curl -S -o chevereto-free.zip -L \
     "https://github.com//$REPO/releases/latest/download/$latest.zip"

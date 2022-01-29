@@ -1,7 +1,7 @@
 {
     "variables": {
         "do_api_token": "{{env `DIGITALOCEAN_API_TOKEN`}}",
-        "image_name": "chevereto-free-{{timestamp}}",
+        "image_name": "chevereto-free-latest-{{timestamp}}",
         "apt_packages": "apache2 libapache2-mod-php mysql-server php php-common php-cli php-curl php-fileinfo php-gd php-imagick php-intl php-json php-mbstring php-mysql php-opcache php-pdo php-pdo-mysql php-xml php-xmlrpc php-zip python3-certbot-apache software-properties-common unzip",
         "application_name": "Chevereto-Free",
         "repo": "rodber/chevereto-free",
