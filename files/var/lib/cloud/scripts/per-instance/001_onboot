@@ -15,9 +15,13 @@ cat >/root/.mysql_password <<EOM
 MYSQL_ROOT_PASS="${MYSQL_ROOT_PASS}"
 EOM
 
+echo $(date -u) ": Saved MYSQL_ROOT_PASS at /root/.mysql_password" >>/var/log/per-instance.log
+
 mysql -u root -e "CREATE DATABASE $CHEVERETO_DB_NAME;"
 mysql -u root -e "CREATE USER '$CHEVERETO_DB_USER'@'$CHEVERETO_DB_HOST' IDENTIFIED BY '$CHEVERETO_DB_PASS';"
 mysql -u root -e "GRANT ALL ON *.* TO '$CHEVERETO_DB_USER'@'$CHEVERETO_DB_HOST';"
+
+echo $(date -u) ": Created database, user & grants" >>/var/log/per-instance.log
 
 mysqladmin -u root -h localhost password $MYSQL_ROOT_PASS
 
@@ -32,6 +36,8 @@ set -eux
     echo "export CHEVERETO_DB_PASS=$CHEVERETO_DB_PASS"
     echo "export CHEVERETO_DB_PORT=$CHEVERETO_DB_PORT"
 } >>"/etc/apache2/envvars"
+
+echo $(date -u) ": Saved CHEVERETO_DB_* at /etc/apache2/envvars" >>/var/log/per-instance.log
 
 systemctl restart apache2
 
@@ -55,6 +61,10 @@ sed -e '/Match User root/d' \
 
 systemctl restart ssh
 
-rm -rf "${WORKING_DIR}"/index.html
+echo $(date -u) ": ssh service restarted." >>/var/log/per-instance.log
 
-echo $(date -u) ": System provisioning script is complete." >>/var/log/per-instance.log
+rm -rf /var/www/html/index.html
+
+echo $(date -u) ": Removed dummy index.html file." >>/var/log/per-instance.log
+
+echo $(date -u) ": System provisioning complete." >>/var/log/per-instance.log
