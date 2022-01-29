@@ -1,12 +1,8 @@
-# DigitalOcean Marketplace
-
-> 🔔 [Subscribe](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrvZ8PYc9JbsVUttqiPV1zXt6DDtf7lhepEStqE8LhGs8922ZYmGT7CYjMH5uSx23pL6Q) to don't miss any update regarding Chevereto.
+# Chevereto-Free DigitalOcean Marketplace
 
 ![Chevereto](LOGO.svg)
 
-[![Community](https://img.shields.io/badge/chv.to-community-blue?style=flat-square)](https://chv.to/community)
-
-This repository provides the Chevereto [DigitalOcean Marketplace](https://marketplace.digitalocean.com/apps/chevereto?refcode=f800a079f4f1) application.
+This repository provides the Chevereto-Free [DigitalOcean Marketplace](https://marketplace.digitalocean.com/apps/chevereto-free) application.
 
 ## Instructions
 
@@ -27,7 +23,7 @@ export DIGITALOCEAN_API_TOKEN=token_here
 Run:
 
 ```sh
-git clone https://github.com/chevereto/digitalocean-marketplace
-cd digitalocean-marketplace/
+git clone https://github.com/rodber/chevereto-free-digitalocean
+cd chevereto-free-digitalocean/
 packer build marketplace-image.json
 ```

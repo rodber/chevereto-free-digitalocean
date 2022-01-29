@@ -7,4 +7,4 @@ set -eux
     echo "post_max_size = 50M"
     echo "max_execution_time = 30"
     echo "memory_limit = 512M"
-} >/etc/php/7.4/apache2/conf.d/chevereto.ini
+} >/etc/php/7.4/apache2/conf.d/chevereto-free.ini

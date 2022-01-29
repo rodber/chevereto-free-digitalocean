@@ -1,8 +1,8 @@
 Chevereto-Free
 https://github.com/chevereto/chevereto-free
-1.3.0
-https://github.com/chevereto/chevereto-free/releases/tag/1.3.0
-MIT
+1.6.2
+https://github.com/chevereto/chevereto-free/releases/tag/1.6.2
+AGPL-3.0-only
 https://github.com/chevereto/chevereto-free/blob/master/LICENSE
 
 PHP

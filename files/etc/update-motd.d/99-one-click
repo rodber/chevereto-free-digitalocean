@@ -8,13 +8,13 @@ cat <<EOF
 / __/ _ \/ -_) |/ / -_) __/ -_) __/ _ \ 
 \__/_//_/\__/|___/\__/_/  \__/\__/\___/
 
-Welcome to DigitalOcean's One-Click Chevereto server!
+Welcome to DigitalOcean's One-Click Chevereto-Free server!
 
 To keep this server secure, the UFW firewall is enabled.
 All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
 
 In a web browser, you can view:
- * The new Chevereto site: http://$myip
+ * The new Chevereto-Free site: http://$myip
 
 On the server:
  * The default web root is located at /var/www/html
@@ -25,11 +25,11 @@ On the server:
 
 IMPORTANT:
  * After connecting to the server for the first time, immediately add the
-   Chevereto administrator at http://$myip
+   Chevereto-Free administrator at http://$myip
  * Secure your database by running:
    > mysql_secure_installation
 
-For help and more information, visit https://chevereto.com
+For help and more information, visit https://chevereto-free.github.io/
 
 ********************************************************************************
 To delete this message of the day: rm -rf $(readlink -f ${0})
